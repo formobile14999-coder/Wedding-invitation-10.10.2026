@@ -255,7 +255,7 @@
 
         .fade-word-denis {
             opacity: 0;
-            transform: translateY(22px);
+            transform: translate(-60px, 22px);
         }
 
         .glass-block.visible .fade-word-denis {
@@ -265,11 +265,31 @@
         @keyframes fadeInWordDenis {
             from {
                 opacity: 0;
-                transform: translateY(22px);
+                transform: translate(-60px, 22px);
             }
             to {
                 opacity: 1;
-                transform: translateY(10px);
+                transform: translate(0, 10px);
+            }
+        }
+
+        .fade-word-elena {
+            opacity: 0;
+            transform: translateX(60px);
+        }
+
+        .glass-block.visible .fade-word-elena {
+            animation: fadeInWordElena 0.7s ease forwards;
+        }
+
+        @keyframes fadeInWordElena {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
             }
         }
 
@@ -368,6 +388,28 @@
             align-items: flex-start;
             gap: 12px;
             margin-bottom: 26px;
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        .glass-block.visible .timeline-item {
+            animation: timelineItemIn 0.6s ease forwards;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.35s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.6s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.85s; }
+
+        @keyframes timelineItemIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         .timeline-time-col {
@@ -727,7 +769,7 @@
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 12px;
-    color: #341F1C;
+    color: #810220;
 }
 
 .calendar-weekdays,
@@ -790,6 +832,48 @@
     color: #fff;
 }
 
+/* DRESS / Code entrance */
+.dress-word {
+    opacity: 0;
+    transform: translateY(-40px);
+}
+
+.glass-block.visible .dress-word {
+    animation: dressWordIn 0.7s ease forwards;
+}
+
+@keyframes dressWordIn {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.code-word {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.glass-block.visible .code-word {
+    animation: codeWordIn 0.7s ease forwards;
+    animation-delay: 0.15s;
+}
+
+@keyframes codeWordIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
     </style>
 </head>
 <body>
@@ -819,7 +903,7 @@
     <span class="fade-word-elena" style="animation-delay: 0.45s; color: #341F1C;">Екатерина</span>
 </div>
             
-            <div class="date-3-rows f-cormorant" style="color: #341F1C;">
+            <div class="date-3-rows f-cormorant" style="color: #810220;">
                 <div class="fade-word" style="animation-delay: 0.6s;">10</div>
                 <div class="date-day-large fade-word" style="animation-delay: 0.8s;">ОКТЯБРЯ</div>
                 <div class="fade-word" style="animation-delay: 0.9s;">2026</div>
@@ -980,8 +1064,8 @@
         <!-- БЛОК 7 -->
         <div class="glass-block auto-height">
             <div style="position: relative; display: inline-block; text-align: left;">
-                <div class="f-cormorant title-large" style="font-size: 2.4rem; margin-bottom: 0; white-space: nowrap;">DRESS</div>
-                <div class="f-ceremonious" style="font-size: 2.6rem; margin: -16px 0 0 45px; position: relative; z-index: 2;">Code</div>
+                <div class="f-cormorant title-large dress-word" style="font-size: 2.4rem; margin-bottom: 0; white-space: nowrap;">DRESS</div>
+                <div class="f-ceremonious code-word" style="font-size: 2.6rem; margin: -16px 0 0 45px; position: relative; z-index: 2;">Code</div>
             </div>
             
             <p class="f-gothic" style="margin-top: 10px; font-size: 0.9rem; opacity: 0.9;">
